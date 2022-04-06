@@ -25,15 +25,15 @@ class Grupo:
             self.listadoAlumnos.append(alumno)
 
     def __str__(self):
-        texto = "Grupo de estudiantes: "
-        if self._grupo == "grupo ordinado":
-            texto += "grupo predeterminado"
-        else:
-            texto += self._grupo
-        return texto
+        return f"Grupo de estudiantes: {self._grupo}"
+
 
     @ classmethod
     def asignarNombre(cls, nombre="Grado 10"):
+        cls.grado = nombre
+
+    @ classmethod
+    def asignarNombre(cls, nombre="Grado 4"):
         cls.grado = nombre
 
     @ classmethod
